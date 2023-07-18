@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anurag University | Catalogs</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="w-full max-w-full h-full bg-white">
+        <div class="w-[100%] max-w-[100%] flex flex-col items-center justify-center gap-[1rem]">
+
+            <!-- AU Logo -->
+            <div class="max-w-full w-[1200px] mx-auto flex justify-center items-center">
+                <img src="./assets/Logo.jpg" alt="AU" class="w-[240px] object-cover">
+            </div>
+            <!-- AU Logo -->
+
+            <!-- Navbar -->
+            <nav class="w-[100%] bg-[#232323] h-[80px]">
+                <ul class="max-w-full w-[1200px] h-full mx-auto flex justify-center items-center gap-[4rem]">
+                    <li data-link="1" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="index.html">Login</a></li>
+                    <li data-link="2" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="register.html">Register</a></li>
+                    <li data-link="3" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="catalog.html">Catalog</a></li>
+                    <li data-link="4" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+            <!-- Navbar -->
+            
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Catalog -->
+
+    <section class="w-[100%] max-w-[100%]">
+        <div class="w-[100%] max-w-[100%] min-h-[100vh] mx-auto pl-[0.5rem] flex flex-row">
+
+            <aside class="w-[280px] min-h-[100vh] flex flex-col items-start gap-[1rem] py-8 px-8 border-r-[5px] border-[#232323]">
+                <button class="text-[24px] text-green-500 border-l-[4px] border-green-500 px-2 font-[400] sideBtn" data-side="1">CSE</button>
+                <button class="text-[24px] text-[#232323] font-[400] sideBtn" data-side="2">ECE</button>
+                <button class="text-[24px] text-[#232323] font-[400] sideBtn" data-side="3">EEE</button>
+                <button class="text-[24px] text-[#232323] font-[400] sideBtn" data-side="4">Mechanical</button>
+                <button class="text-[24px] text-[#232323] font-[400] sideBtn" data-side="5">Chemical</button>
+            </aside>
+
+            <main class="w-[100%] max-w-[100%] flex flex-row flex-wrap justify-center items-center my-[2rem] gap-[2rem] px-[1rem]">
+
+                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                    <p>Description...</p>
+                </div>
+                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                    <p>Description...</p>
+                </div>
+                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                    <p>Description...</p>
+                </div>
+
+            </main>
+            
+        </div>
+    </section>
+
+    <!-- Catalog -->
+
+    <script>
+        let navLinks = Array.from(document.querySelectorAll('nav ul li'));
+        let pageno = "3";
+        navLinks.forEach((link) => {
+            if (link.dataset.link === pageno) {
+                link.classList.add('bg-green-500', 'text-[#232323]');
+            }
+            else {
+                link.classList.add('bg-transparent', 'text-[#fff]');
+            }
+        })
+
+        let sideLinks = Array.from(document.querySelectorAll('.sideBtn'));
+        sideLinks.forEach((btn) => {
+            btn.addEventListener('click', function() {
+                sideLinks.forEach((link) => {
+                    if (this.dataset.side === link.dataset.side) {
+                        link.classList.add('text-green-500', 'border-l-[4px]', 'border-green-500', 'px-2');
+                    }
+                    else {
+                        link.classList.remove('text-green-500', 'border-l-[4px]', 'border-green-500', 'px-2')
+                        link.classList.add('text-[#232323]');
+                    }
+                })
+            })
+        })
+    </script>
+
+</body>
+</html>

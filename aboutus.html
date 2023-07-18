@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anurag University | About Us</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="w-full max-w-full h-full bg-white">
+        <div class="w-[100%] max-w-[100%] flex flex-col items-center justify-center gap-[1rem]">
+
+            <!-- AU Logo -->
+            <div class="max-w-full w-[1200px] mx-auto flex justify-center items-center">
+                <img src="./assets/Logo.jpg" alt="AU" class="w-[240px] object-cover">
+            </div>
+            <!-- AU Logo -->
+
+            <!-- Navbar -->
+            <nav class="w-[100%] bg-[#232323] h-[80px]">
+                <ul class="max-w-full w-[1200px] h-full mx-auto flex justify-center items-center gap-[4rem] ">
+                    <li data-link="1" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="index.html">Login</a></li>
+                    <li data-link="2" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="register.html">Register</a></li>
+                    <li data-link="3" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="catalog.html">Catalog</a></li>
+                    <li data-link="4" class="px-8 py-4 rounded-[4px]"><a class="font-sans text-[24px]" href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+            <!-- Navbar -->
+            
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- About Us -->
+
+    <section class="w-full h-full my-[2rem]">
+        <div class="w-[1200px] max-w-full h-[100%] mx-auto flex flex-row flex-wrap gap-[0.8rem] justify-center">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About1.jpg" alt="About AU">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About2.jpg" alt="About AU">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About3.jpg" alt="About AU">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About4.jpg" alt="About AU">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About5.jpg" alt="About AU">
+            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./assets/About6.jpg" alt="About AU">
+        </div>
+    </section>
+
+    <!-- About Us -->
+
+    <script>
+        let navLinks = Array.from(document.querySelectorAll('nav ul li'));
+        let pageno = "4";
+        navLinks.forEach((link) => {
+            if (link.dataset.link === pageno) {
+                link.classList.add('bg-green-500', 'text-[#232323]');
+            }
+            else {
+                link.classList.add('bg-transparent', 'text-[#fff]');
+            }
+        })
+    </script>
+
+</body>
+</html>
