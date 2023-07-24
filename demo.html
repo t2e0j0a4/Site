@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <main class="w-[100%]">
+
+        <div class="w-[100%] flex justify-center p-2 items-center">
+            <img class="w-[260px]" src="./Logo.jpg" alt="AU">
+        </div>
+
+        <section class="w-[100%] bg-blue-500 min-h-[100%]">
+
+            <nav class="flex py-4 px-2 w-[100%] justify-center items-center">
+                <ul class="w-[100%] gap-9 flex justify-center items-center">
+                    <li class="text-[21px] cursor-pointer" data-token="1">Login</li>
+                    <li class="text-[21px] cursor-pointer" data-token="2">Registration</li>
+                    <li class="text-[21px] cursor-pointer" data-token="3">Catalog</li>
+                    <li class="text-[21px] cursor-pointer" data-token="4">About Us</li>
+                </ul>
+            </nav>
+
+            <div class="w-[100%] h-[100%] mt-8 flex">
+
+                <aside class="w-[280px] h-[100vh] p-4 pl-16 flex flex-col gap-4 ">
+                    <p data-branch="CSE" class="text-[18px] cursor-pointer">CSE</p>
+                    <p data-branch="ECE" class="text-[18px] cursor-pointer">ECE</p>
+                    <p data-branch="EEE" class="text-[18px] cursor-pointer">EEE</p>
+                    <p data-branch="Mechanical" class="text-[18px] cursor-pointer">Mechanical</p>
+                    <p data-branch="Chemical" class="text-[18px] cursor-pointer">Chemical</p>
+                </aside>
+
+                <div class="w-[100%] min-h-[100vh] bg-red-600 p-3 rounded-md">
+                    
+                    <div class="w-[100%] max-w-full my-[2rem] flex justify-center items-center boxes" data-label="1">
+                        <form class="w-[600px] max-w-[100%] bg-[#232323] flex flex-col justify-center items-center gap-[1.6rem] py-[2rem] px-[1.2rem] rounded-[8px]">
+                            <h1 class="text-center text-[32px] text-white font-[700]">Login</h1>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="email" class="text-white text-[21px] font-[400]">Email</label>
+                                <input required id="email" type="email" name="email" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="john.doe@mail.com">
+                            </div>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="password" class="text-white text-[21px] font-[400]">Password</label>
+                                <input required type="password" id="password" name="password" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="Password">
+                            </div>
+                            <button class="w-[100%] bg-white rounded-[4px] px-4 py-3 text-[#232323] text-[20px]" type="submit">Login</button>
+                        </form>
+                    </div>
+
+                    <div class="w-[100%] max-w-full my-[2rem] hidden justify-center items-center boxes" data-label="2">
+                        <form class="w-[600px] max-w-[100%] bg-[#232323] flex flex-col justify-center items-center gap-[1.6rem] py-[2rem] px-[1.2rem] rounded-[8px]">
+                            <h1 class="text-center text-[32px] text-white font-[700]">Register</h1>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="rollno" class="text-white text-[21px] font-[400]">Roll No</label>
+                                <input required id="rollno" type="text" name="rollno" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="Roll Number...">
+                            </div>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="email" class="text-white text-[21px] font-[400]">Email</label>
+                                <input required id="email" type="email" name="email" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="john.doe@mail.com">
+                            </div>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="password" class="text-white text-[21px] font-[400]">Password</label>
+                                <input required type="password" id="password" name="password" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="Password">
+                            </div>
+                            <div class="w-[100%] flex flex-col items-start gap-[0.7rem]">
+                                <label for="cpassword" class="text-white text-[21px] font-[400]">Confirm Password</label>
+                                <input required type="password" id="cpassword" name="cpassword" class="w-[100%] bg-transparent py-3 px-4 text-white text-[18px] border-white border-[1.2px] rounded-[4px] outline-none" placeholder="Confirm Password">
+                            </div>
+                            <button class="w-[100%] bg-white rounded-[4px] px-4 py-3 text-[#232323] text-[20px]" type="submit">Register</button>
+                        </form>
+                    </div>
+
+                    <div class="w-full my-[2rem] hidden boxes" data-label="4">
+                        <div class="w-[100%]  mx-auto flex flex-row flex-wrap gap-[0.8rem] justify-center">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About1.jpg" alt="About AU">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About2.jpg" alt="About AU">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About3.jpg" alt="About AU">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About4.jpg" alt="About AU">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About5.jpg" alt="About AU">
+                            <img class="w-[240px] h-[240px] object-cover rounded-[4px]" src="./About6.jpg" alt="About AU">
+                        </div>
+                    </div>
+
+                    <div class="w-[100%] max-w-[100%] hidden boxes" data-label="3">
+                        <div class="w-[100%] max-w-[100%] mx-auto pl-[0.5rem] flex flex-col">
+
+                            <h1 class="catalog text-[36px] font-[700]">CSE</h1>
+
+                            <main class="w-[100%] max-w-[100%] flex flex-row flex-wrap justify-center items-center my-[2rem] mt-[4rem] gap-[2rem] px-[1rem]">
+
+                                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                                    <p>Description...</p>
+                                </div>
+                                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                                    <p>Description...</p>
+                                </div>
+                                <div class="w-[360px] flex flex-col items-start gap-[0.4rem]">
+                                    <img src="https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDF8MHwxfHNlYXJjaHwxMXx8Ym9vayUyMGZyb250JTIwY292ZXJ8ZW58MHx8fHwxNjg5NzA2OTk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="AU" class="w-[100%] rounded-[4px] object-cover" >
+                                    <h2 class="font-[500] text-[24px] text-[#232323]">Title</h1>
+                                    <p>Description...</p>
+                                </div>
+
+                            </main>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        let links = Array.from(document.querySelectorAll('nav ul li'));
+        console.log(links);
+
+        let boxes = Array.from(document.querySelectorAll('.boxes'));
+        console.log(boxes);
+
+        links.forEach((link) => {
+            link.addEventListener('click', () => {
+                let linkToken = link.dataset.token;
+                boxes.forEach((box) => {
+                    if (linkToken === box.dataset.label) {
+                        box.classList.remove('hidden');
+                        box.classList.add('flex');
+                    }
+                    else {
+                        box.classList.add('hidden');
+                        box.classList.remove('flex');
+                    }
+                })
+            })
+        })
+
+        let catalog = document.querySelector('.catalog');
+        let buttons = Array.from(document.querySelectorAll('aside p'));
+
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                boxes[0].classList.remove('flex');
+                boxes[0].classList.add('hidden');
+                boxes[1].classList.remove('flex');
+                boxes[1].classList.add('hidden');
+                boxes[3].classList.remove('hidden');
+                boxes[3].classList.add('flex');
+                boxes[2].classList.remove('flex');
+                boxes[2].classList.add('hidden');
+                catalog.innerHTML = btn.dataset.branch;
+
+
+            })
+        })
+
+
+    </script>
+    
+</body>
+</html>
